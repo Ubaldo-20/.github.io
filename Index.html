@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <title>Portafolio Ubaldo Bermúdez </title>
+    <link rel="icon" type="icon/png" href="IMG/portafolio.jpg">
+</head>
+
+<body>
+    <header>
+        <img src="IMG/Foto Ubaldo.jpg" alt="Ubaldo Antonio Bermúdez Carrera" class="profile-picture">
+        <h1>Ubaldo Antonio Bermúdez Carrera</h1>
+        <h2 class="animated-text">Mi Portafolio</h2>
+    </header>
+    
+    <section id="perfil">
+        <div class="perfil-info">
+            <img src="IMG/Informacion personal.png" alt="Foto de perfil">
+            <details>
+                <summary><h2>Datos Personales.</h2></summary>
+                <p>Email: <a href="mailto:ubaldobermudez17@gmail.com">ubaldobermudez17@gmail.com</a></p>
+                <p>WhatsApp: <a href="https://wa.me/50684424938">+506 8442-4938</a></p>
+                <p>Edad: 21 años </p>
+                <p>Carrera: Ingeniería Informática</p>
+                <p>Universidad: Hispanoamericana</p>
+                <p>Ubicación: Cañas, Guanacaste </p>
+            </details>
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="experiencia">
+        <div class="experiencia-info">
+            <img src="IMG/experiencia_laboral-removebg-preview.png" alt="Experiencia Laboral">
+            <details>
+                <summary><h2>Experiencia laboral.</h2></summary>
+                <ul>
+                    <li>Soporte técnico | Oct-Dic 2021 Práctica Profesional</li>
+                    <li>Mantenimiento de equipo de cómputo.</li>
+                    <li>Instalación de sistemas operativos.</li>
+                    <li>Desarrollo de páginas web.</li>
+                    <li>Instalación de cámaras de seguridad.</li>
+                    <li>Mantenimiento a impresoras.</li>
+                </ul>
+            </details>
+        </div>
+    </section>
+    
+
+    <section id="codigos">
+        <div class="experiencia-info">
+            <img src="IMG/Python-logo.png" alt="Python Logo">
+        <details>
+            <summary><h2>Proyecto sobre compras usando Python.</h2></summary>
+        <pre><code>
+            <span class="keyword">from</span> math <span class="keyword">import</span> While
+            <span class="keyword">import</span> random
+            <span class="keyword">import</span> math
+            
+            <span class="comment"># Función principal de descuentos.</span>
+            <span class="keyword">def</span> descuentos():
+                <span class="comment"># Almacena el valor de entrada del usuario</span>
+                totalCompras = <span class="keyword">input</span>("Ingrese el monto total de sus compras: ")
+            
+                <span class="comment"># Valida que el monto sea positivo</span>
+                <span class="keyword">if</span> (<span class="builtin">int</span>(totalCompras) < 0):
+                    <span class="builtin">print</span>("No puede ingresar un monto negativo")
+                    totalCompras = <span class="keyword">input</span>("Ingrese el monto total de sus compras: ")
+                
+                <span class="comment"># Valida que el monto sea mayor a 10 mil</span>
+                <span class="keyword">if</span> (<span class="builtin">int</span>(totalCompras) < 10000):
+                    <span class="builtin">print</span>("Para montos menores a ₡10.000 no aplica la promoción. Gracias por su compra")
+            
+                <span class="comment"># Verifica el caso de interés, que sea igual o mayor a 10 mil</span>
+                <span class="keyword">if</span> (<span class="builtin">int</span>(totalCompras) >= 10000):
+                    descuento = random.randint(1, 5) 
+                    <span class="comment"># Llamar funcipon para generar descuento.</span>
+                    generarDescuento(<span class="builtin">int</span>(totalCompras), descuento)
+            
+            <span class="comment"># Función que genera los descuentos</span>              
+            <span class="keyword">def</span> generarDescuento(montoIngresado, valorDescuento):
+                <span class="comment"># Se verifica cada uno de los casos posibles, del 1 al 5.</span>
+                <span class="comment"># El montoFinal se calcula dependiendo del descuento correspondiente.</span>
+                <span class="keyword">if</span> (valorDescuento == 1):
+                    <span class="builtin">print</span>("El monto inicial es de ₡", montoIngresado)
+                    <span class="builtin">print</span>("La bola aleatoria es Blanca, no hay descuento")
+                    montoFinal = montoIngresado
+                    <span class="builtin">print</span>("El monto total es de: ₡", montoFinal)
+                <span class="comment"># ... (#Función para imprimir el patrón.
+                    #Se inicializa un string vacío. 
+                    #Al string se le van agregando caracteres conforme avanza cada ciclo for
+                    def imprimirPatron():
+                        cadena=""
+                        for i in range(10,50):
+                            cadena= cadena + str(i) + " "
+                            #Verifica si corresponde hacer el salto de línea
+                            if(i == 19 or i == 29 or i == 39):
+                                cadena= cadena + "\n"
+                        print(cadena)
+                    
+                    
+                                
+                           
+                    
+                    # *********************************************************************************************************************************  
+                    
+                    #Función para generar el pedido del usuario.
+                    def calcularPedido():
+                    
+                        #Inicialización de variables.
+                        precioBolsa=1000
+                        precioCajaG=5000
+                        precioCajaM=3000
+                        precioCajaP=1000
+                        precioTotal=0
+                        cajasG=0
+                        cajasM=0
+                        cajasP=0
+                        seguir="s"
+                       
+                    
+                        #Ciclo que revisa bandera de continuar
+                        while(seguir=="s" or seguir=="S"):
+                    
+                            #Variable que almacena la entrada del usuario
+                            cantCafe = input("Ingrese la cantidad de bolsas de café: ")
+                    
+                            #Se almacena en cantBolsas el valor de cantCafe en forma de integer(era de tipo str).
+                            cantBolsas=int(cantCafe)
+                    
+                    
+                             #Se realizan las validaciones de mayor a menor. Primero se verifica cuantas cajas grandes se requieren, luego medianas y pequeñas.
+                            #A cantBolsas se le van restando la bolsas que ya han sido distribuidas.
+                            if(cantBolsas>=20):
+                                cajasG=cantBolsas//20
+                                cantBolsas=cantBolsas-cajasG*20
+                                
+                            if(cantBolsas>=10):
+                                cajasM=cantBolsas//10
+                                cantBolsas=cantBolsas-cajasM*10
+                    
+                            if(cantBolsas!=0 and cantBolsas>0):
+                                #Se redondea hacia arriba
+                                cajasP=math.ceil(cantBolsas/5)
+                            
+                            #Se muestran los resultados en consola. Solo se verifica si usó cada tipo de caja antes de imprimirlo.
+                            print("Número de bolsas ordenadas:",cantCafe,"-" "\t₡",precioBolsa*int(cantCafe))
+                            precioTotal=precioBolsa*int(cantCafe)
+                            print("Cajas usadas: \n")
+                            if(cajasG!=0):
+                                print("\t", "\t",cajasG," grande -","\t", "\t₡", cajasG*precioCajaG)
+                                precioTotal+=cajasG*precioCajaG
+                            if(cajasM!=0):
+                                print("\t", "\t",cajasM," mediana-","\t", "\t₡", cajasM*precioCajaM)
+                                precioTotal+=cajasM*precioCajaM
+                            if(cajasP!=0):
+                                print("\t", "\t",cajasP," pequeña-","\t", "\t₡", cajasP*precioCajaP)
+                                precioTotal+=cajasP*precioCajaP
+                    
+                            print("Su costo total es de :", "\t","\t", "\t₡", precioTotal)
+                            
+                    
+                    
+                            seguir=input("Desea continuar (S/N)")
+                             #Ciclo para mantenerse escuchando hasta que se seleccione S o N
+                            while(seguir!="s" and seguir!="S" and seguir!="n" and seguir!="N"):
+                                seguir=input("Desea continuar (S/N)")
+                    
+                    
+                    
+                    
+                    #***********************************************************************************************************
+                    def proyectoResidencia():
+                        print("Proyecto Residencia del curso Programación I")
+                        print("Desarrollador: Ubaldo Antonio Bermúdez Carrera")
+                        print("Identificación: 22109100")
+                        print("Menú:")
+                        mostrar=True
+                        while(mostrar==True):
+                            menu=input("Seleccione la opción que desea: \n \ta. Descuentos sobre compras \n \tb. Imprimir Patrón \n \tc. Calcular Pedido   \n \td. Salir\n")
+                            if(menu=="a"):
+                                descuentos()
+                            if(menu=="b"):
+                                imprimirPatron()
+                            if(menu=="c"):
+                                calcularPedido()
+                            if(menu=="d"):
+                                mostrar=False
+                            
+                    
+                    
+                    
+                    
+                    
+                    proyectoResidencia()
+                    )</span>
+            </code></pre>
+        </details>
+    </section>
+
+    <script src="script.js"></script>
+    <center>
+    <footer>
+        <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+</center>
+</body>
+
+</html>
